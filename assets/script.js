@@ -10,6 +10,7 @@ let projectsBtn = document.getElementById("projects-btn");
 let homeBtn = document.getElementById("home-btn");
 let contactBtn = document.getElementById("contact-btn");
 
+let placeHolder = document.getElementById("place-holder");
 let contentMod = document.getElementById("content-module");
 let navHidden = false;
 
@@ -21,7 +22,7 @@ let contactHTML = document.getElementById("contact-content").innerHTML;
 const initBtns = () => {
 	navBtn.addEventListener("click", function() {
 		navMod.classList.toggle("nav-hide");
-		contentMod.classList.toggle("nav-hide");
+		placeHolder.classList.toggle("nav-hide");
 		if (navHidden) {
 			navBtn.src="./resources/blue-minus.png";
 		} else {
@@ -30,7 +31,7 @@ const initBtns = () => {
 		navHidden = !navHidden;
 	});
 	aboutBtn.addEventListener("click", function() {
-		contentMod.innerHTML = aboutHTML;
+		placeHolder.innerHTML = aboutHTML;
 	});
 	portBtn.addEventListener("mouseenter", function() {
 		dropLocation.classList.toggle("drop-nav");
@@ -42,16 +43,16 @@ const initBtns = () => {
 		dropLocation.classList.remove("drop-nav");
 	});
 	eduBtn.addEventListener("click", function() {
-		contentMod.innerHTML = eduHTML;
+		placeHolder.innerHTML = eduHTML;
 	});
 	expBtn.addEventListener("click", function() {
-		contentMod.innerHTML = expHTML;
+		placeHolder.innerHTML = expHTML;
 	});
 	homeBtn.addEventListener("click", function() {
 		window.location.reload();
 	});
 	contactBtn.addEventListener("click", function() {
-		contentMod.innerHTML = contactHTML;
+		placeHolder.innerHTML = contactHTML;
 	});
 }
 
