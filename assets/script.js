@@ -32,6 +32,9 @@ const initBtns = () => {
 	aboutBtn.addEventListener("click", function() {
 		contentMod.innerHTML = aboutHTML;
 	});
+	portBtn.addEventListener("mouseenter", function() {
+		dropLocation.classList.toggle("drop-nav");
+	});
 	portBtn.addEventListener("click", function() {
 		dropLocation.classList.toggle("drop-nav");
 	});
