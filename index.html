@@ -5,6 +5,7 @@
 	<link rel="icon" href="./resources/pulse1600.png">
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 	<script type="text/javascript" src="./assets/paper.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 	<div id="nav-module">
@@ -16,6 +17,7 @@
 		   <button id="about-btn" href="#">About</button>
 		   <button id="port-btn" href="#">Portfolio</button>
 		   <button id="home-btn" href="#">Home</button>
+		   <button id="contact-btn" href="#">Contact</button>
 		</nav>
 		<div id="drop-location">
 			<div class="drop-content">
@@ -27,23 +29,29 @@
 	<div id="content-module">
 		<canvas id="myCanvas" resize="true"></canvas>
 	</div>
+	<div id="contact-content" class="hidden">
+		<div class="page-contents" id="contact-text">
+			<p>If you have any inquiries, please contact me via email at <span class=styled-text-1>howardtingting@gmail.com</span> or through <a class="styled-a" href="https://www.linkedin.com/in/howard-ting-b0502510b/">LinkedIn</a></p>
+		</div>
+	</div>
 	<div id="exp-content" class="hidden">
 		<div class="page-contents" id='exp-text'>
 			<ul class ="unstyled-ul">
 				<li>
-					<span class="styled-text0">Recent Skills:</span>
+					<span class="styled-text-0">Skills:</span>
 					<ul>
 					    <li>VBA Excel</li>
 					    <li>Python</li>
 					    <li>HTML/CSS/JavaScript/JQuery/js_libraries Front End Web Development</li>
 					    <li>Computer Science / Software Engineering</li>
 					    <li>Data Science, Machine Learning, Deep Learning</li>
-					    <li>Teaching in a Modern Classroom Setting</li>
+					    <li>Teaching and Classroom Management</li>
+					    <li>Communication</li>
 					</ul>
 				</li>
 				<br>
 				<li>
-					<span class="styled-text0">2019: Substitute Teaching</span>
+					<span class="styled-text-0">2019: Substitute Teaching</span>
 					<ul>
 						<li>Summary: With careful observation of students and classroom management techniques, I work to maintain an environment that is conducive to the student's ability to learn and grow.</li>
 					    <li>Swing Education: Independent Contract Substitute throughout the Bay Area</li>
@@ -52,7 +60,7 @@
 				</li>
 				<br>
 				<li>
-					<span class="styled-text0">2018-2019: U.S. Marine Corps Enlisted</span>
+					<span class="styled-text-0">2018-2019: U.S. Marine Corps Enlisted</span>
 					<ul>
 						<li>Lance Corporal, Enlisted Reserve, as of January, 2019</li>
 						<li>CLB 453, Innovation Cell Software Engineer as of April, 2019.</li>
@@ -60,7 +68,7 @@
 				</li>
 				<br>
 			    <li>
-			    	<span class="styled-text0">2013-2017: Computer Science B.S. at UC Santa Cruz</span>
+			    	<span class="styled-text-0">2013-2017: Computer Science B.S. at UC Santa Cruz</span>
 				    <ul>
 				        <li>Tutor, UC Santa Cruz Learning Support Services (2017): Introduction to Compiler Design and Introduction to Algorithm Design</li>
 				        <li>Developer, <a class="styled-a" href="http://policestrategies.com/">PoliceStrategies</a> (2017): prototype Android application with team of four. Developed Login and Authentication UI along with photo uploading module in Android Studio using various API's and Firebase as backend.</li>
@@ -92,21 +100,21 @@
 	</div>
 	<div id="about-content" class="hidden">
 		<div class="page-contents" id="about-text">
-			<p><span class="styled-text0">Howard Ting</span> - Twenty-four, Taiwanese-American, male, second-generation, military whose current life activities consist primarily of reading, writing, sleeping, learning, exercising, piano-playing and software-engineering.</p>
+			<p><span class="styled-text-0">Howard Ting</span> - Twenty-four, Taiwanese-American, male, second-generation, military whose current life activities consist primarily of reading, writing, sleeping, learning, exercising, piano-playing and software-engineering.</p>
 
-			<p><span class="styled-text0">Reading</span> - My favorite works of literature are usually narratives that focus on the study of human character, values and psychology. In my experience, the most captivating stories are ones that encapsulate themes of sacrifice, humanism and hope against varying depths of both internal and external adversities. I read as much fiction as I can get away with.</p>
+			<p><span class="styled-text-0">Reading</span> - My favorite works of literature are usually narratives that focus on the study of human character, values and psychology. In my experience, the most captivating stories are ones that encapsulate themes of sacrifice, humanism and hope against varying depths of both internal and external adversities. I read as much fiction as I can get away with.</p>
 
-			<p><span class="styled-text0">Writing</span> - I love to write character studies. These are usually snippets of human characters and motivations that are a reflection of what I've observed of the human psyche. Many of my characters are projections of different aspects of people I know (if I know you, you're probably a character. :)) To uncover these characters and then to thrust them into a fictional reality is an activity I find to be both liberating and enjoyable.</p>
+			<p><span class="styled-text-0">Writing</span> - I love to write character studies. These are usually snippets of human characters and motivations that are a reflection of what I've observed of the human psyche. Many of my characters are projections of different aspects of people I know (if I know you, you're probably a character. :)) To uncover these characters and then to thrust them into a fictional reality is an activity I find to be both liberating and enjoyable.</p>
 
-			<p><span class="styled-text0">Piano</span> - I taught myself how to play the piano and have been playing for a little over a decade now. My playlist is a rotation of sets of piece. Beethoven, Liszt and Chopin are the classical composers whose pieces I play most often. Some of my favorite musical themes come from video games I've played (e.g. Undertale, Legend of Zelda, Maplestory)</p>
+			<p><span class="styled-text-0">Piano</span> - I taught myself how to play the piano and have been playing for a little over a decade now. My playlist is a rotation of sets of piece. Beethoven, Liszt and Chopin are the classical composers whose pieces I play most often. Some of my favorite musical themes come from video games I've played (e.g. Undertale, Legend of Zelda, Maplestory)</p>
 
-			<p><span class="styled-text0">Tech</span> - As my field of study and source of income, tech is an inescapable subject. My primary involvement is in data science, where I use software tools to analyze and visualize clusters of data; computer science with specialization in machine learning. One of my favorite devices to play with is the Raspberry Pi. It's a tiny computer that can be programmed to do many things (e.g. security feed and related functionalities.) It can even run tensor-flow for object recognition (big surprise!)</p>
+			<p><span class="styled-text-0">Tech</span> - As my field of study and source of income, tech is an inescapable subject. My primary involvement is in data science, where I use software tools to analyze and visualize clusters of data; computer science with specialization in machine learning. One of my favorite devices to play with is the Raspberry Pi. It's a tiny computer that can be programmed to do many things (e.g. security feed and related functionalities.) It can even run tensor-flow for object recognition (big surprise!)</p>
 		</div>
 	</div>
 	<script src="./assets/script.js"></script>
 </body>
 <link rel="stylesheet" type="text/css" href="./css/style.css">
-<link rel="stylesheet" type="text/css" href="./css/about.css">
+<link rel="stylesheet" type="text/css" href="./css/contact.css">
 <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
 
 <script type="text/paperscript" canvas="myCanvas">

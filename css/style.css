@@ -2,6 +2,10 @@ body {
 	background:cornflowerblue;
 }
 
+.noshow {
+	display:none;
+}
+
 button {
 	text-decoration: none;
 	color:white;
@@ -15,6 +19,7 @@ button {
 	     -o-transition: background-color .4s ease;
 	        transition: background-color .4s ease;
 }
+
 .unstyled-ul {
 	list-style: none;
 	text-decoration: none;
@@ -41,10 +46,15 @@ button {
 	text-decoration: underline;
 }
 
-.styled-text0 {
+.styled-text-0 {
 	color:yellow;
 	font-size:1.1em;
 	text-decoration:underline;
+}
+
+.styled-text-1 {
+	color: yellow;
+	text-decoration: none;
 }
 
 #nav-header {

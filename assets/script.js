@@ -8,6 +8,7 @@ let eduBtn = document.getElementById("edu-btn");
 let expBtn = document.getElementById("exp-btn");
 let projectsBtn = document.getElementById("projects-btn");
 let homeBtn = document.getElementById("home-btn");
+let contactBtn = document.getElementById("contact-btn");
 
 let contentMod = document.getElementById("content-module");
 let navHidden = false;
@@ -15,6 +16,7 @@ let navHidden = false;
 let aboutHTML = document.getElementById("about-content").innerHTML;
 let eduHTML = document.getElementById("edu-content").innerHTML;
 let expHTML = document.getElementById("exp-content").innerHTML;
+let contactHTML = document.getElementById("contact-content").innerHTML;
 
 const initBtns = () => {
 	navBtn.addEventListener("click", function() {
@@ -45,6 +47,12 @@ const initBtns = () => {
 	homeBtn.addEventListener("click", function() {
 		window.location.reload();
 	});
+	contactBtn.addEventListener("click", function() {
+		contentMod.innerHTML = contactHTML;
+	});
 }
 
-initBtns();
+$(document).ready(function() {
+	//document.body.classList.remove("noshow");
+	initBtns();
+});
