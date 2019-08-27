@@ -157,14 +157,9 @@ button {
 /* portfolio.css */
 #drop-location {
   width: 116.9px;
-  top: -200px;
+  margin-top: 30px;
   position: absolute;
   margin-left: 128px;
-  -webkit-transition: transform 0s ease;
-  -moz-transition: transform 0s ease;
-  -ms-transition: transform 0s ease;
-  -o-transition: transform 0s ease;
-  transition: transform 0s ease;
 }
 
 .drop-nav {

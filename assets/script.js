@@ -34,21 +34,21 @@ const initBtns = () => {
 		placeHolder.innerHTML = aboutHTML;
 	});
 	portBtn.addEventListener("mouseenter", function() {
-		dropLocation.classList.toggle("drop-nav");
+		dropLocation.classList.remove('noshow');
 	});
 	portBtn.addEventListener("click", function() {
-		dropLocation.classList.toggle("drop-nav");
+		dropLocation.classList.remove('noshow');
 	});
 	dropLocation.addEventListener("mouseleave", function() {
-		dropLocation.classList.remove("drop-nav");
+		dropLocation.classList.add('noshow');
 	});
 	eduBtn.addEventListener("click", function() {
 		placeHolder.innerHTML = eduHTML;
-		dropLocation.classList.remove("drop-nav");
+		dropLocation.classList.add("noshow");
 	});
 	expBtn.addEventListener("click", function() {
 		placeHolder.innerHTML = expHTML;
-		dropLocation.classList.remove("drop-nav");		
+		dropLocation.classList.add('noshow');
 	});
 	homeBtn.addEventListener("click", function() {
 		placeHolder.innerHTML = "";
@@ -59,6 +59,5 @@ const initBtns = () => {
 }
 
 $(document).ready(function() {
-	//document.body.classList.remove("noshow");
 	initBtns();
 });

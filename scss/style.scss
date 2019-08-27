@@ -160,10 +160,9 @@ button {
 
 #drop-location {
 	width:116.9px;
-	top:-200px;
+	margin-top:30px;
 	position: absolute;
     margin-left: 128px;
-    @include transition(transform 0s ease);
 }
 
 .drop-nav {
