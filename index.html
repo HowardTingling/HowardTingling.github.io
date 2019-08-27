@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 	<script type="text/javascript" src="./assets/paper.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link href="css/mobile.css" media="screen and (max-width: 767px)" rel="stylesheet">
+	<!--<link href="css/mobile.css" media="screen and (max-width: 767px)" rel="stylesheet">-->
 </head>
 <body>
 	<div id="nav-module">
@@ -47,7 +47,7 @@
 					<ul>
 					    <li>VBA Excel</li>
 					    <li>Python</li>
-					    <li>HTML/CSS/JavaScript/JQuery/jslibraries Front End Web Development</li>
+					    <li>Front End Web Development: HTML, scss, js & js packages and libraries</li>
 					    <li>Computer Science / Software Engineering</li>
 					    <li>Data Science, Machine Learning, Deep Learning</li>
 					    <li>Teaching and Classroom Management</li>
@@ -157,9 +157,9 @@
 		for (var i = 0; i < count; i++) {
 			var item = project.activeLayer.children[i];
 			
-			// Move the item 1/20th of its width to the right. This way
+			// Move the item 1/60th of its height up. This way
 			// larger circles move faster than smaller circles:
-			item.position.y -= item.bounds.height / 20;
+			item.position.y -= item.bounds.height / 60;
 
 			// If the item has left the view on the right, move it back
 			// to the left:
