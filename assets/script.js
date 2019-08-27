@@ -44,12 +44,14 @@ const initBtns = () => {
 	});
 	eduBtn.addEventListener("click", function() {
 		placeHolder.innerHTML = eduHTML;
+		dropLocation.classList.remove("drop-nav");
 	});
 	expBtn.addEventListener("click", function() {
 		placeHolder.innerHTML = expHTML;
+		dropLocation.classList.remove("drop-nav");		
 	});
 	homeBtn.addEventListener("click", function() {
-		window.location.reload();
+		placeHolder.innerHTML = "";
 	});
 	contactBtn.addEventListener("click", function() {
 		placeHolder.innerHTML = contactHTML;
