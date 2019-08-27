@@ -1,5 +1,6 @@
-body {
+html, body {
   background: black;
+  overflow: hidden;
 }
 
 .noshow {
@@ -141,7 +142,7 @@ button {
 .page-contents {
   position: relative;
   margin: 20px auto 0 auto;
-  min-width: 430px;
+  min-width: 300px;
   width: 50%;
   color: white;
   background-color: #00001a;
@@ -153,7 +154,7 @@ button {
   box-shadow: 10px 10px 13px -1px rgba(0, 0, 0, 0.5);
 }
 
-/*portfolio*/
+/* portfolio.css */
 #drop-location {
   width: 116.9px;
   top: -200px;
@@ -204,6 +205,12 @@ button {
 .unstyled-ul {
   text-align: middle;
   padding: 0;
+}
+
+/* contact.css */
+#contact-text {
+  text-align: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

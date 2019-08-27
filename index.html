@@ -9,11 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 	<script type="text/javascript" src="./assets/paper.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="css/mobile.css" media="screen and (max-width: 767px)" rel="stylesheet">
 </head>
 <body>
 	<div id="nav-module">
 		<h2 id=nav-header>
-			<span>"To infinity and beyond!" - Buzz Lightyear</span>
+			<span style="text-align: center;">"To infinity and beyond!" - Buzz Lightyear</span>
 		</h2>
 		<nav id="nav-bar">
 		   <image id="nav-btn" src="./resources/blue-minus.png"></image>
@@ -46,7 +47,7 @@
 					<ul>
 					    <li>VBA Excel</li>
 					    <li>Python</li>
-					    <li>HTML/CSS/JavaScript/JQuery/js_libraries Front End Web Development</li>
+					    <li>HTML/CSS/JavaScript/JQuery/jslibraries Front End Web Development</li>
 					    <li>Computer Science / Software Engineering</li>
 					    <li>Data Science, Machine Learning, Deep Learning</li>
 					    <li>Teaching and Classroom Management</li>
@@ -150,8 +151,9 @@
 		// the position of the placed symbols:
 		w = window.innerWidth;
 		h = window.innerHeight;
-		view.viewSize.width = 0.79 * w;
+		view.viewSize.width = 0.8 * w;
 		view.viewSize.height = (0.8 * h) - 110;
+		//console.log(String(view.viewSize.width) + ", " + String(view.viewSize.height));
 		for (var i = 0; i < count; i++) {
 			var item = project.activeLayer.children[i];
 			
@@ -167,4 +169,10 @@
 		}
 	}
 </script>
+<style type="text/css">
+	canvas[resize] {
+	    width: 100%;
+	    height: 100%;
+	}
+</style>
 </html>

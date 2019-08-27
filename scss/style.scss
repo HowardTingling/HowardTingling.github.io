@@ -18,8 +18,9 @@ $styled-text-color: yellow;
 	box-shadow: $box-props;	
 }
 
-body {
+html, body {
 	background: $bg-color;
+	overflow:hidden;
 }
 
 .noshow {
@@ -145,7 +146,7 @@ button {
 .page-contents {
 	position:relative;
 	margin: 20px auto 0 auto;
-	min-width:430px;
+	min-width:300px;
 	width:50%;
 	color:$btn-color;
 	background-color:$btn-bg;
