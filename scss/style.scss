@@ -136,7 +136,7 @@ button {
 	z-index: 20;
 }
 
-#nav-module, #content-module {
+#nav-module, #content-module, #place-holder {
 	@include transition(transform .4s ease);
 }
 

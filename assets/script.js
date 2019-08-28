@@ -47,6 +47,7 @@ const initBtns = () => {
 	});
 	semiC.addEventListener("click", function(){
 		navMod.classList.toggle("nav-hide");
+		placeHolder.classList.toggle("nav-hide");
 	});
 }
 
