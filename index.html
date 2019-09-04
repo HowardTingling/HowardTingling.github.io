@@ -20,10 +20,10 @@
 		<div class="semi-c"></div>
 		<nav id="nav-bar">
 		   <image id="nav-btn" src="./resources/blue-minus.png"></image>
+		   <button id="home-btn" href="#">Home</button>
 		   <button id="about-btn" href="#">About</button>
 		   <button id="edu-btn" href="#">Education</button>
 			<button id="exp-btn" href="#">Experience</button>
-		   <button id="home-btn" href="#">Home</button>
 		   <button id="contact-btn" href="#">Contact</button>
 		</nav>
 	</div>
@@ -124,7 +124,7 @@
 	// Create a symbol, which we will use to place instances of later:
 	var path = new Path.Circle({
 		center: [0, 0],
-		radius: 3,
+		radius: 2,
 		fillColor: '#fffdde',
 		strokeColor: 'white'
 	});
@@ -151,11 +151,11 @@
 			
 			// Move the item 1/60th of its height up. This way
 			// larger circles move faster than smaller circles:
-			item.position.y += item.bounds.height / 20;
+			item.position.y -= item.bounds.height / 40;
 
 			// If the item has left the view on the bottom, move it back to the top
-			if (item.bounds.top > view.size.height) {
-				item.position.y = 0
+			if (item.bounds.top < 0) {
+				item.position.y = view.size.height
 			}
 		}
 	}
