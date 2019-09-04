@@ -1,0 +1,93 @@
+BLOG
+	id : integer
+		|
+	title : varchar(1024)
+		|
+	content : varchar
+		|
+	date : timestamp(2)
+
+STORIES
+	id : integer
+		|
+	title : varchar(256)
+		|
+	summary : varchar(8000)
+		|
+	chapters : varchar ARRAY[[n]]; 
+		optional chapter limit, holds array of chapter_id's
+		|
+	num_chapters : integer
+		|
+	date : timestamp(2)
+
+CHAPTERS
+	id : varchar(1024); String(story_id) + String(chapter_num)
+		|
+	title : varchar(256)
+		|
+	content : varchar
+		|
+	date : timestamp(2)
+		|
+	story_id : integer
+		|
+	chapter_num: integer
+
+(+) New Blog :
+	0. Form for entering title and content
+		create_blog_client(title, content)
+	1. (title, content) => server({
+		id: generateID(),
+		title: title,
+		content: content,
+		date: generateDate()
+	})
+
+(+) Show Blog : 
+	1. (Blog_URL => server)
+	2. ()
+
+(+) New Story : 
+	0. Form for entering title=storyName and Summary
+		create_story_client(title, summary)
+	1. (title, summary) => server
+	2. create_story_server({
+		id : generateID(),
+		title : title,
+		summary : summary,
+		chapters : '{}',
+		num_chapters : 0,
+		date : generateDate()
+	});
+	3. generateStoryURL(Story_ID)
+	4. create_html_server(title, summary), URL => client
+	5. Display
+
+(+) Story > New Chapter
+	1. Form for entering new chapter text
+	2. (title, content, story_id) => server
+	3. create_chapter_server({
+		id : generateID(),
+		title : title,
+		content : content
+		date: generateDate(),
+		story_id : story_id
+		chapter_num : story_id.num_chapters + 1
+	});
+	3. generateChapterURL(story_id, ChapterID)
+	4. create_html_server(title, content),  URL => client
+	5. client display html in pre-existing box
+
+(+) Show Chapters (in story nav)
+	1. (story_id) => server
+	2. arrayify(story_id.chapters) => client
+	3. client_array = ClientProcessArray(story_id.chapters)
+	4. HTML_dropdown = createHTMLList(client_array) | cache
+	5. PASTE HTML_dropdown under Story; 
+	6. cache HTML_dropdown if not already
+
+(+) Show Story :
+	1. (story_id) => server
+	2. create_html_server{title, summary} => client
+	3. client display html in pre-existing boxes

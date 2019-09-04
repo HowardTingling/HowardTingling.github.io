@@ -7,7 +7,7 @@
 	<title>Howard</title>
 	<link rel="icon" href="./resources/pulse1600.png">
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
-	<script type="text/javascript" src="./assets/paper.js"></script>
+	<script type="text/javascript" src="./assets/paper-full.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link href="css/mobile.css" media="screen and (max-width: 767px)" rel="stylesheet">
 </head>
@@ -113,9 +113,9 @@
 		</div>
 	</div>
 	<script src="./assets/script.js"></script>
-</body>
-<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 
+</body>
 <script type="text/paperscript" canvas="myCanvas">
 	// The amount of circles we want to make:
 	var count = 400;
@@ -151,20 +151,13 @@
 			
 			// Move the item 1/60th of its height up. This way
 			// larger circles move faster than smaller circles:
-			item.position.y -= item.bounds.height / 20;
+			item.position.y += item.bounds.height / 20;
 
-			// If the item has left the view on the right, move it back
-			// to the left:
-			if (item.bounds.top < 0) {
-				item.position.y = view.size.height;
+			// If the item has left the view on the bottom, move it back to the top
+			if (item.bounds.top > view.size.height) {
+				item.position.y = 0
 			}
 		}
 	}
 </script>
-<style type="text/css">
-	canvas[resize] {
-	    width: 100%;
-	    height: 100%;
-	}
-</style>
 </html>
