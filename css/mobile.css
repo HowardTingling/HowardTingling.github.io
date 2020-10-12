@@ -19,7 +19,7 @@
   background-color: white;
   border-radius: 50%;
   margin-left:50%;
-  transform:translate(-50%, 167%);
+  transform:translate(-50%, 201%);
   opacity:0.5;
 }
 
@@ -44,5 +44,5 @@
 }
 
 .nav-hide {
-  transform: translateY(-114px) !important;
+  transform: translateY(-138px) !important;
 }
