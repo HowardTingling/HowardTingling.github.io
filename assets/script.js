@@ -51,6 +51,10 @@ const initBtns = () => {
 	});
 }
 
+$.get('https://www.google.com/', function(response) {
+	console.log(response);
+});
+
 $(document).ready(function() {
 	initBtns();
 });
