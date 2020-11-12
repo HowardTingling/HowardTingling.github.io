@@ -51,10 +51,13 @@ const initBtns = () => {
 	});
 }
 
-$.get('https://www.google.com/', function(response) {
-	console.log(response);
-});
+const loadURL = (urlLink) => {
+	window.location = './resources/20201011_Resume.pdf'
+	return False
+}
 
 $(document).ready(function() {
 	initBtns();
+	loadURL('./resources/20201011_Resume.pdf')
+	//loadURL('./resources/20201011_Resume.pdf')
 });
